@@ -420,8 +420,10 @@ function office_hours_load_data($nids, $field) {
   foreach ($dbinfo['columns'] as $name => $attributes) {
     $col_names[] = $attributes['column'] . ' AS ' . $name;
   }
-  $sql = 'SELECT ' . implode(', ', $col_names);
-  $sql .= ' FROM ' . $dbinfo['table'] . ' ' . $where;
+  $sql = 'SELECT ' . implode(', ', $col_names) .
+         ' FROM ' . $dbinfo['table'] .
+         ' ' . $where .
+         ' ORDER BY delta ASC';
 
   $query = db_query($sql);
 
