@@ -32,7 +32,7 @@ function office_hours_theme() {
       'template' => 'office_hours_formatter_daily',
     ),
     'office_hours_week' => array(
-    	'arguments' => array('element' => NULL),
+      'arguments' => array('element' => NULL),
       'file' => 'office_hours.theme.inc',
     ),
     'office_hours_format_day' => array(
@@ -83,7 +83,7 @@ function office_hours_content_is_empty($item, $field) {
 function office_hours_field_info() {
   return array(
     'office_hours' => array(
-    	'label' => 'Office Hours',
+      'label' => 'Office Hours',
       'description' => t('Store office or opening hours in the database.'),
     ),
   );
